@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.bsc.qa.framework.listener.WebDriverListener"/>
+  </listeners>
+  <test name="CitrixLoginWithChrome(failed)" parallel="tests">
+    <parameter name="Env_" value="testingSheetName"/>
+    <parameter name="BrowserDimensions_" value="1200,1000"/>
+    <parameter name="Browser_" value="chrome"/>
+    <parameter name="Driver_" value="src\test\resources\selenium_standalone_binaries\windows\googlechrome\64bit\chromedriver.exe"/>
+    <parameter name="Url_" value="https://connect.bsc.bscal.com/vpn/index.html"/>
+    <parameter name="ImplicitWait_" value="false"/>
+    <parameter name="Headless_" value="false"/>
+    <classes>
+      <class name="com.qa.test.webapplication.tests.CitrixResetPasswordURLTest">
+        <methods>
+          <include name="testCitrixResetPasswordLink"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.qa.test.webapplication.tests.CitrixResetPasswordURLTest -->
+    </classes>
+  </test> <!-- CitrixLoginWithChrome(failed) -->
+</suite> <!-- Failed suite [Suite] -->
